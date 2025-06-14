@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div className="fixed top-0 left-0 z-50 w-full flex items-center justify-between px-6 md:px-16 lg:px-36 py-5">
       <Link className="max-md:flex-1" to="/">
-        <img src={assets.logo} alt="" className="w-36 h-auto" />
+        <img src={assets.logo} alt="logo" className="w-36 h-auto" />
       </Link>
 
       <div
@@ -33,6 +33,15 @@ const Navbar = () => {
           to="/"
         >
           Home
+        </Link>
+        <Link
+          onClick={() => {
+            scrollTo(0, 0);
+            setIsOpen(false);
+          }}
+          to="/movies"
+        >
+          Movies
         </Link>
         <Link
           onClick={() => {
